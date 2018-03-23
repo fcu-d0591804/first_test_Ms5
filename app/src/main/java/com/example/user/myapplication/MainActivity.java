@@ -54,7 +54,7 @@ public class MainActivity extends ListActivity {
         SimpleAdapter adapter = new SimpleAdapter(
                 this,
                 list,
-                android.R.layout.simple_list_item_2,
+                android.R.layout.simple_list_item_checked,
                 new String[] {"food","place"},
                 new int[] {android.R.id.text1,android.R.id.text2}
         );
