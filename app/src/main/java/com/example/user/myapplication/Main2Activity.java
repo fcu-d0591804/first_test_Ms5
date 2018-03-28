@@ -25,6 +25,11 @@ public class Main2Activity extends AppCompatActivity {
         setResult(RESULT_OK, i);
         finish();
 
-
+    }
+    public void fn_dislike(View view) {
+        Intent i = new Intent();
+        i.putExtra("Like", 0);
+        setResult(RESULT_OK, i);
+        finish();
     }
 }
