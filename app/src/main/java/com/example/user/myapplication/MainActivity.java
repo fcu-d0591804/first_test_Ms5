@@ -1,6 +1,7 @@
 package com.example.user.myapplication;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -66,7 +67,12 @@ public class MainActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        Toast.makeText(this,data[position],Toast.LENGTH_SHORT).show();
+        String str = "I like" + mFoods[position];
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+        intent.putExtra("n",position);
+        startActivityForResult(intent,111);
+
     }
 }
 
